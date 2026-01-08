@@ -1,0 +1,425 @@
+/* ==============================
+   BASE / RESET
+================================ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f5f5;
+    color: #444;
+    font-weight: 400;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+p {
+    line-height: 1.9;
+}
+
+/* ==============================
+   HEADER
+================================ */
+
+header {
+    position: relative;
+    background-image: url("imagenes/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+/* Overlay elegante */
+header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+header > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ==============================
+   NAVBAR
+================================ */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 60px;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+nav h1 {
+    font-size: 2.4rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+/* Hover luxury */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 1px;
+    background: white;
+    transition: width 0.4s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ==============================
+   SECCIONES GENERALES
+================================ */
+section {
+    padding: 120px 80px;
+    background-color: #ffffff;
+    scroll-margin-top: 120px;
+}
+
+/* ==============================
+   SERVICIOS
+================================ */
+.servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: transform 0.4s ease;
+}
+
+.servicio img {
+    width: 48px;
+    opacity: 0.9;
+}
+
+.servicio h3 {
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+}
+
+.servicio p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.servicio .linea {
+    width: 60%;
+    height: 2px;
+    background-color: #111;
+    margin-top: 30px;
+    transition: width 0.4s ease;
+}
+
+.servicio:hover {
+    transform: translateY(-6px);
+}
+
+.servicio:hover .linea {
+    width: 80%;
+}
+
+/* ==============================
+   BOTONES
+================================ */
+button {
+    background-color: #111;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    letter-spacing: 1px;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+button:hover {
+    background-color: #c2a46d;
+    color: #111;
+}
+
+/* ==============================
+   FORMULARIOS
+================================ */
+form {
+    max-width: 400px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    font-family: inherit;
+}
+
+/* ==============================
+   NOSOTROS
+================================ */
+.nosotros {
+    background-color: #000;
+    color: white;
+}
+
+.nosotros-contenido {
+    max-width: 900px;
+}
+
+.nosotros-linea {
+    width: 80px;
+    height: 2px;
+    background: white;
+    margin-bottom: 30px;
+}
+
+.nosotros h2 {
+    font-size: 2.2rem;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+}
+
+.nosotros p {
+    color: #ddd;
+    font-size: 1rem;
+}
+
+/* ==============================
+   FOOTER
+================================ */
+.footer {
+    background-color: #000;
+    color: white;
+    padding: 80px 60px 40px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-contacto h2 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+
+.footer-divider {
+    height: 1px;
+    background: rgb(0, 0, 0);
+    margin: 60px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.footer-bottom li {
+    list-style: none;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.footer-bottom li:hover {
+    opacity: 0.7;
+}
+
+/* ==============================
+   RESPONSIVE
+================================ */
+@media (max-width: 1024px) {
+    .servicios {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 24px 30px;
+    }
+
+    section {
+        padding: 80px 40px;
+    }
+
+    .servicios {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .servicio {
+        align-items: center;
+        text-align: center;
+    }
+
+    .servicio .linea {
+        width: 40%;
+    }
+
+    .footer {
+        padding: 60px 30px;
+    }
+
+    .footer-top,
+    .footer-bottom {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+.galeria {
+    padding: 120px 80px;
+    background: #ffffff;
+}
+
+.galeria h2 {
+    margin-bottom: 60px;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==============================
+   WHATSAPP FLOAT PRO
+================================ */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 14px 22px;
+    background: #000;
+    color: white;
+
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.35);
+    z-index: 999;
+
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 45px rgba(0,0,0,.45);
+}
+
+/* Ícono */
+.whatsapp-icon {
+    width: 42px;
+    height: 42px;
+    background: #000000;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-icon img {
+    width: 22px;
+    height: 22px;
+}
+
+/* Texto */
+.whatsapp-text {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Mobile: solo icono */
+@media (max-width: 768px) {
+    .whatsapp-text {
+        display: none;
+    }
+
+    .whatsapp-float {
+        padding: 14px;
+        border-radius: 50%;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
