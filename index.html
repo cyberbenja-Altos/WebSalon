@@ -116,26 +116,28 @@
     <h2>GALERÍA</h2>
 
     <div class="galeria-grid">
-        <img src="imagenes/imagen1.jpg" alt="i1">
-        <img src="imagenes/imagen2.jpeg" alt="i2">
-        <img src="imagenes/imagen3.jpg" alt="i3">
+        <img src="imagenes/salon1.jpeg" alt="i1">
+        <img src="imagenes/salon2.jpeg" alt="i2">
+        <img src="imagenes/salon3.jpeg" alt="i3">
         <img src="imagenes/imagen4.jpg" alt="i4">
-        <img src="imagenes/imagen5.jpg" alt="i5">
-        <img src="imagenes/imagen6.jpg" alt="i6">
+        <img src="imagenes/flussfuera.jpg" alt="i5">
+        <img src="imagenes/logo%20fluss.png" alt="i6">
     </div>
 </section>
 
 <section id="contacto">
 
     <h3>Contacto</h3>
-    <form>
+    <form action="mailto:salonfluss@gmail.com" method="POST" enctype="text/plain">
 
-        <input type="text" placeholder="Nombre">
-        <input type="email" placeholder="Correo">
-        <textarea placeholder="Mensaje"></textarea>
-        <button>Enviar</button>
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="email" name="correo" placeholder="Correo" required>
+        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+
     </form>
 </section>
+
 
 <footer class="footer">
     <div class="footer-top">
@@ -144,8 +146,8 @@
             <span class="linea-top"></span>
             <h2>PONTE EN CONTACTO</h2>
 
-            <p class="contacto-item">📞 55 00 00 00 00</p>
-            <p class="contacto-item">✉ contacto@ejemplo.com</p>
+            <p class="contacto-item">📞 347 105 58585</p>
+            <p class="contacto-item">✉ salonfluss@gmail.com</p>
         </div>
 
         <div class="footer-logo">
@@ -178,7 +180,7 @@
 </footer>
 
 <!-- BOTÓN WHATSAPP -->
-<a href="https://wa.me/5215500000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+<a href="https://wa.me/3471095858" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
     <span class="whatsapp-icon">
         <img src="imagenes/whatsapp.svg" alt="WhatsApp">
     </span>
